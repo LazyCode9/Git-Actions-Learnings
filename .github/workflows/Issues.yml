@@ -1,0 +1,10 @@
+name: Issues-Workflow
+on: issues
+jobs:
+  issue-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+      - name: Meta-data Output
+        run: echo "${{toJSON(github)}}"
